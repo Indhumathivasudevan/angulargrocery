@@ -1,0 +1,17 @@
+<div class="container">
+    <form class="form-group" #f="ngForm" (ngSubmit)="registerProduct(f)">
+        PRODUCT NAME:<input type="text" name="name" [(ngModel)]="productName" class="form-control" autocomplete="off">
+        COST:<input type="text" name="cost" [(ngModel)]="cost" class="form-control">
+        DISCOUNT:<input type="text" name="discount" [(ngModel)]="discount" class="form-control">
+        CATEGORY:
+        <select [(ngModel)]="category" name="category" class="form-select">
+
+            <option *ngFor="let c of categories" [ngValue]="c.categoryName">{{c.categoryName}}</option>
+        </select>
+        DESCRIPTION:<input type="text" name="description" [(ngModel)]="description" class="form-control">
+        RATING:<input type="text" name="rating" [(ngModel)]="rating" class="form-control">
+        IMAGE:<input type="text" name="image" [(ngModel)]="image" class="form-control">
+        <input type="submit" value="submit" class="btn btn-primary"> <button class="btn btn-danger"><a
+                href="http://localhost:4200/">Cancel</a></button>
+    </form>
+</div>

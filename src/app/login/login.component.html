@@ -1,0 +1,27 @@
+<!-- <div id="bg" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFifJEBFwEqnYMJGZfiXqZITiZINUzf-PwAA&usqp=CAU)"> -->
+<div class="p-3 mb-2 bg-light text-dark">
+<div class="login-wrapper" >
+
+    <form class="form" #loginform="ngForm" (ngSubmit)="login(loginform)">
+        
+        <h2>Login</h2>
+         
+        <div class="input-group">
+            <input type="text" name="loginUser" id="loginUser" #name1="ngModel" [(ngModel)]="username" name="name"required />
+            <label for="loginUser">User Name</label>
+        </div>
+
+        
+
+        <div class="input-group">
+            <input type="password" name="loginPassword" id="loginPassword" #password1="ngModel" [(ngModel)]="password" name="password" required />
+            <label for="loginPassword">Password</label>
+        </div>
+        <input type="submit" value="Login" class="submit-btn"/>
+        
+    </form>
+    <!-- <div *ngIf="!flag">
+        <router-outlet></router-outlet>
+    </div>  -->
+ </div> 
+</div>

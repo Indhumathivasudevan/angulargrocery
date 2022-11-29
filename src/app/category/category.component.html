@@ -1,0 +1,12 @@
+<div class="container">
+    <form #catform="ngForm" (ngSubmit)="save(catform)">
+        Category:<input type="text" [(ngModel)]="cat" name="cat" class="form-control" required="required"
+            autocomplete="off">
+        <!-- NAME:<input type="text" [(ngModel)]="name" class="form-control">
+        SALARY:<input type="number" [(ngModel)]="salary" class="form-control"> -->
+
+        <input type="submit" value="Add">
+    </form>
+    <button class="btn btn-danger"><a href="http://localhost:4200/">Cancel</a></button>
+
+</div>

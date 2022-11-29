@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>products</h1>
+    <div *ngIf="productflag">
+        <div *ngFor="let p of products" class="c">
+            <form #f="ngForm">
+
+                <img src="{{p.image}}" alt="{{p.productName}} image"><br>
+                <h3>{{p.productName}}</h3><br>
+                {{p.description}}<br>
+                Cost:₹{{p.cost}}<br><br>
+                <button (click)="edit(p)" class="btn btn-primary">Edit details</button>
+                <button (click)="deleteproduct(p)" class="btn btn-danger"><a
+                        href="http://localhost:4200/product">Delete</a></button>
+            </form>
+        </div>
+    </div>
+
+    <div *ngIf="editflag">
+        <form class="form-group" #f="ngForm" (ngSubmit)="editProduct(f)">
+            <input type="hidden" name="productId" [(ngModel)]="pro.productId">
+            PRODUCT NAME:<input type="text" name="productName" [(ngModel)]="pro.productName" class="form-control">
+            COST:<input type="text" name="cost" [(ngModel)]="pro.cost" class="form-control">
+            DISCOUNT:<input type="text" name="discount" [(ngModel)]="pro.discount" class="form-control">
+            DESCRIPTION:<input type="text" name="description" [(ngModel)]="pro.description" class="form-control">
+            RATING:<input type="text" name="rating" [(ngModel)]="pro.rating" class="form-control">
+            IMAGE:<input type="text" name="image" [(ngModel)]="pro.image" class="form-control">
+            <a href="http://localhost:4200/product"><input type="submit" value="submit" class="btn btn-primary"></a>
+            <button id="cancel_edit" class="btn btn-danger" (click)="cancelEdit()">Cancel</button>
+
+        </form>
+
+    </div>
+
+</div>

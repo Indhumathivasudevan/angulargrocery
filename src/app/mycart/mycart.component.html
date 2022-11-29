@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">MyCart Summary</span>
+    <p>{{username}}</p>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <p>Delivery to: </p>
+    <p>{{useraddress.addressLine1}},{{useraddress.addressLine2}},{{useraddress.city}},{{useraddress.state}},{{useraddress.country}},{{useraddress.zipCode}}</p>
+
+<button (click)="change()">Change</button>
+</div>
+
+
+
+<div class="card" style="width: 18rem;" *ngFor="let e of product">
+
+
+  <img src="{{e.image}}" class="card-img-top" alt="alt">
+  <div class="card-body">
+    <h5 class="card-title">Name:{{e.name}}</h5>
+    <span class="card-text">Description:{{e.description}}</span>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cost:{{e.cost}}</li>
+    <li class="list-group-item">Rating:{{e.rating}}</li>
+    <li class="list-group-item">Discount:{{e.discount}}</li>
+  </ul>
+</div>
+
+<h3>Total price:      </h3>>  <button (click)="placeorder()">place Order</button>

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">ADMIN</span>
+        <h4 style="padding:30px">{{username}} dashboard</h4>
+
+
+    </div>
+  </nav>
+<!-- <div class="container">
+ <a routerLink="category">ADD CATEGORY</a><br>
+    <a routerLink="regproduct">ADD PRODUCT</a><br>
+    <a routerLink="product">PRODUCTS</a><br>
+    
+  </div> -->
+
+  
+  <nav class="navbar" style="background-color: #ffb835; justify-content: center;">
+    <ul class="nav  justify-content-center">
+      <li class="nav-item">
+        <a id="align" style="font-size: 20px;" class="nav-link "ariaCurrentWhenActive="page" routerLink='category' routerLinkActive="active" >ADD CATEGORY</a>
+      </li>
+      <li class="nav-item">
+        <a id="align" style="font-size: 20px;" class="nav-link" routerLink="regproduct" >ADD PRODUCT</a>
+      </li>
+      <li class="nav-item">
+        <a  style="font-size: 20px;" class="nav-link" routerLink='product' >PRODUCTS</a>
+      </li>
+    </ul>
+  </nav>
+<router-outlet></router-outlet>
+  
+  
